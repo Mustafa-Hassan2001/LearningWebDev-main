@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diff views of Pic</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        body,
+        html {
+            height: 100%;
+        }
+        img {
+            height: 75%;
+        }
+        /*Using online clip path generator make a shape of desired size and copy the code
+        https://bennettfeely.com/clippy/
+        */
+        .clip-hexagon {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        .clip-elipse {
+            clip-path: ellipse(86% 22% at 49% 48%);
+
+        }
+
+    </style>
+</head>
+<body>
+    <img class="clip-hexagon" src="img/4-ways-cheer-up-depressed-cat.jpg" alt="cat">
+    <img class="clip-elipse" src="img/4-ways-cheer-up-depressed-cat.jpg" alt="cat">
+</body>
+</html>

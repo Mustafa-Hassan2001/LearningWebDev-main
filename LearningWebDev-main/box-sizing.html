@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+    <style>
+        div {
+            width: 160px;
+            height: 80px;
+            padding: 20px;
+            border: 8px solid red;
+            background: yellow;
+        }
+
+        .content-box {
+            box-sizing: content-box;
+            /* Total width = 160px + (2 * 20px) + (2 * 8px) = 216px
+            Total height = 80px + (2 * 20px) + (2 * 8px) = 136px
+            Content box width = 160px
+            Content box height = 80px 
+            */
+        }
+
+        .border-box { /*In this border and padding use up the main width and height instead of adding new area,
+             but margin add new area
+             */
+            box-sizing: border-box;
+             /* Total width = 160px
+            Total height = 80px
+            Content box width = 160px  - (2 * 20px) - (2 * 8px) = 104px
+            Content box height = 80px - (2 * 20px) - (2 * 8px) = 24px 
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content-box">Content Box</div>
+    <br>
+    <div class="border-box">Border Box</div>
+</body>
+</html>

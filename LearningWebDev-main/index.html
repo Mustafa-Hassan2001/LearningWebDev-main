@@ -1,0 +1,241 @@
+<!--html:5 gives this simple boiler plate code-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Not super imp to know-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Not super imp to know-->
+    <title>Abhishek Kaksha</title>
+    <!--This is external css-->
+    <link rel="stylesheet" href="style/style.css">
+    <!--This is internal css-->
+    <style> 
+        h2{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:blue">Inside body h1 <i>header</i>.</h1> <!--This is inline css-->
+    <h2>Inside body h2 header.</h2>
+    <h3>Inside body h3 header.</h3>
+    <h4>Inside body h4 header.</h4>
+    <h5>Inside body h5 header.</h5>
+    <h6>Inside body h6 header.</h6>
+
+    <!--Now this is paragraph
+    All the normal test are shown here like facebooks post and stuff
+    or youtube descripting-->
+    <p>This is a paragraph.</p>
+    <!-- br tag is just for adding line break-->
+    <p>This is a <br> paragraph after br break line.</p>
+    <!--hr is for giving a horizontal line-->
+    <hr>
+    <p id="para">This is a paragraph after horizontal line.</p>
+
+    <!--In html space and enter doesnt show up on website we have to use special entites
+    It displays a reserverd character, special character, emojis, symbols etc in HTML 
+    Syntax is &entity_name; or &#entity_number;-->
+    <a href="https://www.w3schools.com/charsets/ref_html_entities_4.asp">This is the link where all entites are mentioned</a>
+    <p>&lt;p&gt;This is something displaying tags etc using entities&lt;&frasl;p&gt;</p>
+
+    <!-- This is the way to write comments-->
+
+    <!-- if we write lorem100, 100 is the number of words, this lorem gives 100 random words
+    view -> togle word wrap, makes the long line in paragraph view-->
+    <p id="one">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat vero tempora eius perspiciatis, sapiente debitis sit blanditiis, dolorem nesciunt autem dolorum! Nisi sunt neque officia porro modi aut fugiat odio at fugit quaerat! Ex et, iure pariatur, ad explicabo neque est obcaecati reiciendis harum rerum nulla beatae. Ipsam enim accusamus eligendi, corporis expedita nemo possimus ipsa vero a in eveniet maiores porro doloribus blanditiis fugiat. Dignissimos illo reprehenderit quo fuga, non iure, vitae rerum iusto fugiat quia ipsam, necessitatibus officia tempore veritatis. Quos labore repellendus harum aliquam illo doloribus dolorem accusantium perspiciatis voluptate a error voluptatem, libero aut impedit consectetur?</p>
+
+    <!--b tag is for bold
+    s tag is for strong 
+    i tag is for italics
+    em tag is for emphasize similar to italics
+    small tag is for used to make text a little small
+    subscript tag sub superscript tag sup-->
+    <p>
+        <b>This is bold</b> <br>
+        <s>This is strong</s> <br>
+        <i>This is italics</i> <br>
+        <em>This is emphasize</em> <br>
+        <small>This is small</small> <br>
+        Log<sub>2</sub>4 = 2 <br>
+        10<sup>2</sup> = 100 <br>
+    </p>
+
+    <!--List is the most common thing, menu etc 
+    types - Ordered list <ol>, unordered list <ul>, description list
+    <li> is used for mentioning all the list items-->
+    <hr>
+    <h2>Shopping List</h2>
+    <h5>Unordered way</h5>
+    <ul>
+        <li>Milk</li>
+        <li class="special">Butter</li>
+        <li>Jam</li>
+        <li>Biscuit</li>
+        <li>Bread</li>
+        <li>Coffee</li>
+    </ul>
+    <hr>
+    <h5>Ordered way</h5>
+    <ol class="special">
+        <li>Milk</li>
+        <li>Butter</li>
+        <li>Jam</li>
+        <li>Biscuit</li>
+        <li>Bread</li>
+        <li>Coffee</li>
+    </ol>
+    <!-- We can use type attribute to change the numbering methoud-->
+    <ol type="I">
+        <li>Milk</li>
+        <li class="a">Butter</li> <!--just class a-->
+        <li class="a b">Jam</li> <!--this has class a and class b-->
+        <li class="ab">Biscuit</li> <!-- this is class ab-->
+        <li>Bread</li>
+        <li>Coffee</li>
+    </ol>
+    <!--Nesting in list-->
+    <ol>
+        <li>Milk</li>
+        <li>Butter</li>
+        <li>Jam</li>
+        <li>Biscuit</li>
+        <li>Bread -
+            <ul>
+                <li>White</li>
+                <li>Brown</li>
+            </ul>
+        </li>
+        <li>Coffee</li>
+    </ol>
+
+    <!-- Hyperlinking a (anchor) tag is used, imp attribute href for url
+    url is uniform resource locator, unique
+    type - absolute, relative(from current directory to where ever the file is) 
+    if in currect file, just write the file name abc.html or ./abc.html
+    if in your folder then foldername / filename -> /CSS/main.CSS
+    if outside your folder then ../
+    (basically . is current directory and .. is previous directory)
+    -->
+    <!--These are absolute egs-->
+    <a href="https://www.google.com" target="_blank">Google</a> <!--target attributes tell it to open in new tab 
+    if not mentioned then it will open in the same tab-->
+    <br>
+    <a href="page2.html">Page 2</a> 
+    <a href="http://www.youtube.com" target="_blank" rel="noopener noreferrer"><h2>YouTube</h2></a>
+
+    <!--Relative-->
+    <a href="pdf/LUAI07200167.pdf" target="_blank" rel="noopener noreferrer">LU Certificate</a>
+
+    <hr>
+    <!--Image element <img> tag-->
+    <img src="img/4-ways-cheer-up-depressed-cat.jpg" alt="This is a cat" width="350"> <!--We can give height and width, if we give just one thing then aspect ratio is maintained, more things to learn in css
+    alt tag is used when image couldnt load then whatever is in alt it will be displayed-->
+
+    <hr>
+    <!--Video element <img> tag
+    we need to add control attributes so that vid can play
+    autoplay is used so that when ever user opens site it starts automatically
+    controls add all the playing controls
+    loop when vid completes it automatically restarts
+    muted it starts muted
+    poster adds a thumbnail to the video
+    -->
+    <video src="video/Magoosh GRE - Absolute Value Equations.mp4" width="650" controls loop muted poster="img/4-ways-cheer-up-depressed-cat.jpg"></video>
+
+    <!--iframe tag, embedding to display different website in our website
+    the embed url is provided by utube when u click share then embed
+    iframe tag was already provided by utube
+    -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DXuNJ267Vss" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <iframe src="https://salaryprediction-aiml.herokuapp.com/" frameborder="0" width="560" height="600"></iframe>
+
+    <!--Table tag
+    To display tables eg time table etc
+    <Table>
+        <tbody>
+            <tr> table row
+            <td> table data
+                colspan="2"
+            <th> heading
+                attribute- rowspan="2" means combining 2 rows 
+        <tfoot>               
+    thead tbody tfoot doesnt do anything its just for segregating for future reading and understanding
+    -->
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Subject</th>>
+                <th>Theory</th>
+                <th>Practical</th>
+                <th>Total Marks</th>
+                <th>Grades</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>English</th>
+                <td>40</td>
+                <td>40</td>
+                <td>80</td>
+                <td>A+</td>
+            </tr>
+            <tr>
+                <th>Computer Science</th>
+                <td>40</td>
+                <td>40</td>
+                <td>80</td>
+                <td>A+</td>
+            </tr>
+            <tr>
+                <th>Physics</th>
+                <td>40</td>
+                <td>40</td>
+                <td>80</td>
+                <td>A+</td>
+            </tr>
+            <tr>
+                <th>Maths</th>
+                <td>40</td>
+                <td>40</td>
+                <td>80</td>
+                <td>A+</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th colspan="5">Result : Pass</th> <!--All the 5 columns are combined and it will be shown in the middle-->
+        </tfoot>
+    </table>
+
+    <hr>
+    <a href="payment_form.html">This is a forms implementation</a>
+
+    <!--
+    Structure of a website
+    These are semantic tags - tags which clearly defines the content
+    
+    <header> top strip, from one page to another header is mostly same, contains logo heading tagline
+    <nav> navigation bar, keeps menu button, links, tabs
+    <main> main content of website, middle part of the webpage (inside body tag)
+        inside main
+        <article> have like blogs post or something
+        <section> single piece of functionality to put something that is not repeated like testimonial, contact us etc
+        <aside> one the side of webpage like utube recommendation
+        <footer> copyright, faq, pocily, contact info
+
+    Non semantic tags
+    grouping of multiply p tags, so that we can change background etc together
+    <div> this is a block level element 
+    <span> this is inline level element
+    -->
+    <!--Check these out in the inspect element and check how much space they are taking up that way u can tell the difference between block and inline element-->
+    <p>This is first para</p>
+    <p>This is second para</p>
+    <p>this is third para</p>
+    <p>This is fourth para</p>
+    <em>This is em tag</em>
+    <em>em is used to emphasize text</em>
+</body>
+</html>

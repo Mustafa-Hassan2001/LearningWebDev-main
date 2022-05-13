@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+    <style>
+        body {
+            color: blue;
+        }
+        .class-1 a{
+            color: inherit;
+        }
+        .class-2 a{
+            color: initial;
+        }
+        .class-3 a{
+            color: unset;
+        }
+        /* !important makes the specificity 1000 so that will always occur
+        eg. color: blue import !important;
+        */
+    </style>
+</head>
+<body>
+    <ul id="summer-drinks">
+        <li class="class-1">Default <a href="">Link</a> color</li>
+        <li class="class-2">Inherited <a href="">Link</a> color</li>
+        <li class="class-3">Initial <a href="">Link</a> color</li>
+        <li class="class-4">Unset <a href="">Link</a> color</li>
+    </ul>
+</body>
+</html>

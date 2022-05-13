@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries: width</title>
+    <style>
+        html {
+            font-size: 1em;
+        }
+        /*use any one at a time*/
+        /*
+        @media screen and (max-width: 600px) {
+            body {
+                color: red;
+            }
+        } 
+        @media (orientation: landscape) {
+            body {
+                color: rebeccapurple;
+            }
+        } 
+        @media screen and (max-width: 600px) and (orientation: landscape) {
+            body { 
+                color: blue;
+            }
+        }
+        @media screen and (max-width: 600px),
+        screen and (orientation: landscape) { /*Any one(*)/
+            body { 
+                color: darkgreen;
+            }
+        }
+        */
+        @media not all and (orientation: landscape) { /*Not blue when in landscape*/
+            body {
+                color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, possimus!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi repudiandae error illo distinctio earum, quaerat dolor itaque voluptates? Laudantium et numquam quos quia voluptates! Sapiente totam hic ipsa architecto non?</p>
+</body>
+</html>

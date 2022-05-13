@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="style/form.css" />
+  </head>
+  <body>
+    <!--
+    Forms to take input from users like sign up forms etc
+    <form> tag
+    method - GET POST
+    elements in form - type attribute (pre defined values) like text, password, radio, checkbox, file(for uploading file), submit(button), reset(clear all data in form), image(an image in form of button) ; 
+    
+    textarea <textarea cols="85" rows="15" to take data of multiple rows and col, like a paragraph
+
+    selectbox - drop down box so that user can select
+        <select>
+            <option value=""></option>
+        </select>
+
+    name attribute (user defined values) basically naming the element so that we can find out where this data is from, so that we can use it properly in backend
+
+    value attribute has the data
+    -->
+    <a href="index.html">Go back home</a>
+    <div class="container">
+      <form action="">
+        <!--action we give location of server, method we give post or get, by default it is get-->
+        <h1 class="main_heading">Payment Form</h1>
+        <p>Required Fields are followed by *</p>
+        <h2>Contact Information</h2>
+        <!--We can also use div span tags instead of p-->
+        <p>
+          Name: *<input
+            type="text"
+            name="name"
+            required
+            placeholder="Full Name"
+          />
+          <!--name attribute should be unique-->
+        </p>
+        <fieldset>
+          <!--makes a box-->
+          <legend>Gender*</legend>
+          <p>
+            Male <input type="radio" name="gender" id="male" required /> Female
+            <input type="radio" name="gender" id="female" required />
+          </p>
+        </fieldset>
+        <p>
+          Address:
+          <textarea
+            name="address"
+            id="address"
+            cols="100"
+            rows="7"
+            placeholder="Enter Address here"
+          ></textarea>
+        </p>
+        <p>
+          Email: *<input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="example@gmail.com"
+          />
+        </p>
+        <p>
+          Pincode:
+          <input
+            type="number"
+            name="pincode"
+            id="pincode"
+            placeholder="12345"
+          />
+        </p>
+        <h2>Payment Information</h2>
+        <p>
+          Card Type: *
+          <select name="card_type" id="card_type" required>
+            <option value="">--Select a card type--</option>
+            <!--Leave the first one empty so that if user doesnt pick anything
+                    then the first one is not automatically filled-->
+            <option value="visa">Visa</option>
+            <option value="mastercard">Master Card</option>
+            <option value="rupay">Rupay</option>
+          </select>
+        </p>
+        <p>
+          Card Number: *<input
+            type="number"
+            name="card_number"
+            id="card_number"
+            required
+            placeholder="xxxxxxxxxxxxxxxx"
+          />
+        </p>
+        <p>
+          Expiration Date: *<input
+            type="date"
+            name="exp_date"
+            id="exp_date"
+            required
+          />
+        </p>
+        <p>
+          CVV: *<input
+            type="password"
+            name="cvv"
+            id="cvv"
+            required
+            placeholder="123"
+          />
+        </p>
+        <input type="submit" value="Pay Now" />
+      </form>
+    </div>
+  </body>
+</html>

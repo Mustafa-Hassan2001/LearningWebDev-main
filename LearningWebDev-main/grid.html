@@ -1,0 +1,54 @@
+<!-- 
+2D layout
+
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container { /* now that div is a parent element */
+            display: grid;
+            grid-template-columns: 200px 200px 200px; /* similarly for rows also we can give size as fraction 1fr 1fr 1fr all the 3 will have same size */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(3, 1fr) */
+            grid-gap: 20px;
+            grid-auto-rows: minmax(100px, auto); /* min height = 100, max height is auto */
+            grid-auto-columns: minmax(50px, auto);
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* autofill the number of columns using the provided length that is minmax  */
+            column-gap: 120px;
+            row-gap: 120px;
+        }
+        .items {
+            background-color: lightcoral;
+            border: 3px green solid;
+            border-radius: 3px;
+        }
+        #item-2 { /* just give the position where to display in the parent grid layout */
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        #item-1 {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Shortcut to create all div.items{Dabba $}*5 -->
+        <div class="items" id="item-1">Dabba 1</div> <!-- nesting can also be done, by making more divs inside -->
+        <div class="items" id="item-2">Dabba 2</div>
+        <div class="items" id="item-3">Dabba 3</div>
+        <div class="items" id="item-4">Dabba 4</div>
+        <div class="items" id="item-5">Dabba 5</div>
+    </div>
+</body>
+</html>
